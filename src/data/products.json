@@ -1,0 +1,407 @@
+[
+  { "id": 1, "name": "Laptop", "price": 1200 },
+  { "id": 2, "name": "Smartphone", "price": 800 },
+  { "id": 3, "name": "Tablet", "price": 450 },
+  { "id": 7, "name": "Smartphone 2", "price": 700 },
+  { "id": 9, "name": "Smartphone 3", "price": 1800 },
+  {
+    "createdAt": "200",
+    "name": "815",
+    "description": "Homenick - Wuckert's most advanced Pizza technology increases sniveling capabilities",
+    "price": "759.55",
+    "stock": "31076",
+    "id": "1"
+  },
+  {
+    "createdAt": "4408",
+    "name": "938",
+    "description": "Stylish Fish designed to make you stand out with bare looks",
+    "price": "712.36",
+    "stock": "75555",
+    "id": "2"
+  },
+  {
+    "createdAt": "12075",
+    "name": "30293",
+    "description": "Ergonomic Sausages made with Granite for all-day monumental support",
+    "price": "61.55",
+    "stock": "39951",
+    "id": "3"
+  },
+  {
+    "createdAt": "28802",
+    "name": "475",
+    "description": "The Julianne Soap is the latest in a series of dutiful products from Schimmel LLC",
+    "price": "327.09",
+    "stock": "94291",
+    "id": "4"
+  },
+  {
+    "createdAt": "69509",
+    "name": "47961",
+    "description": "Professional-grade Salad perfect for warlike training and recreational use",
+    "price": "745.45",
+    "stock": "49335",
+    "id": "5"
+  },
+  {
+    "createdAt": "40736",
+    "name": "6803",
+    "description": "Innovative Gloves featuring whopping technology and Steel construction",
+    "price": "146.05",
+    "stock": "18305",
+    "id": "6"
+  },
+  {
+    "createdAt": "466",
+    "name": "322",
+    "description": "Discover the warm new Sausages with an exciting mix of Plastic ingredients",
+    "price": "307.25",
+    "stock": "19603-8835",
+    "id": "7"
+  },
+  {
+    "createdAt": "766",
+    "name": "426",
+    "description": "Our delicious-inspired Keyboard brings a taste of luxury to your neglected lifestyle",
+    "price": "842.89",
+    "stock": "01404-5420",
+    "id": "8"
+  },
+  {
+    "createdAt": "296",
+    "name": "9558",
+    "description": "Howe - Bechtelar's most advanced Hat technology increases pitiful capabilities",
+    "price": "300.19",
+    "stock": "83841",
+    "id": "9"
+  },
+  {
+    "createdAt": "4790",
+    "name": "8915",
+    "description": "Ergonomic Computer made with Gold for all-day outlandish support",
+    "price": "124.45",
+    "stock": "80701",
+    "id": "10"
+  },
+  {
+    "createdAt": "17916",
+    "name": "148",
+    "description": "Introducing the Turks and Caicos Islands-inspired Shirt, blending confused style with local craftsmanship",
+    "price": "610.39",
+    "stock": "53731",
+    "id": "11"
+  },
+  {
+    "createdAt": "643",
+    "name": "5541",
+    "description": "Pfannerstill and Sons's most advanced Sausages technology increases inconsequential capabilities",
+    "price": "483.49",
+    "stock": "12735-9451",
+    "id": "12"
+  },
+  {
+    "createdAt": "8518",
+    "name": "512",
+    "description": "Our horse-friendly Pizza ensures useless comfort for your pets",
+    "price": "157.59",
+    "stock": "65672",
+    "id": "13"
+  },
+  {
+    "createdAt": "26115",
+    "name": "60045",
+    "description": "The Adaptive encompassing software Chips offers reliable performance and concrete design",
+    "price": "543.39",
+    "stock": "24664",
+    "id": "14"
+  },
+  {
+    "createdAt": "1221",
+    "name": "60943",
+    "description": "Stylish Towels designed to make you stand out with hot looks",
+    "price": "21.45",
+    "stock": "59773",
+    "id": "15"
+  },
+  {
+    "createdAt": "4270",
+    "name": "4760",
+    "description": "Practical Ball designed with Silk for gigantic performance",
+    "price": "727.67",
+    "stock": "68832-9133",
+    "id": "16"
+  },
+  {
+    "createdAt": "864",
+    "name": "3631",
+    "description": "Savor the spicy essence in our Cheese, designed for right culinary adventures",
+    "price": "570.25",
+    "stock": "06666-3253",
+    "id": "17"
+  },
+  {
+    "createdAt": "272",
+    "name": "727",
+    "description": "Experience the salmon brilliance of our Keyboard, perfect for charming environments",
+    "price": "157.70",
+    "stock": "11691-4896",
+    "id": "18"
+  },
+  {
+    "createdAt": "7286",
+    "name": "4582",
+    "description": "The Joshuah Soap is the latest in a series of gullible products from Hills, Jones and Zieme",
+    "price": "705.62",
+    "stock": "86686",
+    "id": "19"
+  },
+  {
+    "createdAt": "389",
+    "name": "599",
+    "description": "Innovative Bacon featuring careless technology and Bronze construction",
+    "price": "590.99",
+    "stock": "44746",
+    "id": "20"
+  },
+  {
+    "createdAt": "177",
+    "name": "4162",
+    "description": "The azure Mouse combines Montserrat aesthetics with Germanium-based durability",
+    "price": "547.49",
+    "stock": "43790-3629",
+    "id": "21"
+  },
+  {
+    "createdAt": "669",
+    "name": "918",
+    "description": "Savor the smoky essence in our Hat, designed for excited culinary adventures",
+    "price": "23.90",
+    "stock": "18908-0031",
+    "id": "22"
+  },
+  {
+    "createdAt": "204",
+    "name": "200",
+    "description": "New Chicken model with 89 GB RAM, 382 GB storage, and cute features",
+    "price": "23.35",
+    "stock": "97423-8709",
+    "id": "23"
+  },
+  {
+    "createdAt": "924",
+    "name": "396",
+    "description": "Professional-grade Towels perfect for rich training and recreational use",
+    "price": "301.99",
+    "stock": "24451",
+    "id": "24"
+  },
+  {
+    "createdAt": "415",
+    "name": "320",
+    "description": "Discover the gecko-like agility of our Sausages, perfect for enraged users",
+    "price": "651.49",
+    "stock": "92709-7977",
+    "id": "25"
+  },
+  {
+    "createdAt": "662",
+    "name": "91246",
+    "description": "Discover the fox-like agility of our Computer, perfect for polished users",
+    "price": "326.19",
+    "stock": "25918",
+    "id": "26"
+  },
+  {
+    "createdAt": "8756",
+    "name": "33194",
+    "description": "Innovative Mouse featuring writhing technology and Steel construction",
+    "price": "85.85",
+    "stock": "80105",
+    "id": "27"
+  },
+  {
+    "createdAt": "70224",
+    "name": "60542",
+    "description": "Savor the golden essence in our Computer, designed for noted culinary adventures",
+    "price": "762.55",
+    "stock": "07819-8492",
+    "id": "28"
+  },
+  {
+    "createdAt": "85020",
+    "name": "689",
+    "description": "Tasty Computer designed with Bamboo for nimble performance",
+    "price": "166.15",
+    "stock": "13886",
+    "id": "29"
+  },
+  {
+    "createdAt": "72338",
+    "name": "52214",
+    "description": "Discover the rabbit-like agility of our Hat, perfect for rural users",
+    "price": "36.64",
+    "stock": "97379-7830",
+    "id": "30"
+  },
+  {
+    "createdAt": "8177",
+    "name": "8499",
+    "description": "Frozen Gloves designed with Marble for cautious performance",
+    "price": "238.25",
+    "stock": "72904",
+    "id": "31"
+  },
+  {
+    "createdAt": "1839",
+    "name": "809",
+    "description": "Professional-grade Bacon perfect for criminal training and recreational use",
+    "price": "266.85",
+    "stock": "80555-7513",
+    "id": "32"
+  },
+  {
+    "createdAt": "56489",
+    "name": "57936",
+    "description": "The sleek and warmhearted Gloves comes with mint green LED lighting for smart functionality",
+    "price": "905.39",
+    "stock": "42737-2755",
+    "id": "33"
+  },
+  {
+    "createdAt": "338",
+    "name": "66561",
+    "description": "Innovative Towels featuring tender technology and Silk construction",
+    "price": "463.19",
+    "stock": "24661",
+    "id": "34"
+  },
+  {
+    "createdAt": "37035",
+    "name": "55485",
+    "description": "Our sweet-inspired Computer brings a taste of luxury to your helpful lifestyle",
+    "price": "118.69",
+    "stock": "64433",
+    "id": "35"
+  },
+  {
+    "createdAt": "93809",
+    "name": "941",
+    "description": "Discover the bear-like agility of our Gloves, perfect for numb users",
+    "price": "14.89",
+    "stock": "15679-9756",
+    "id": "36"
+  },
+  {
+    "createdAt": "6435",
+    "name": "12978",
+    "description": "Introducing the Colombia-inspired Salad, blending gracious style with local craftsmanship",
+    "price": "223.49",
+    "stock": "10842-1348",
+    "id": "37"
+  },
+  {
+    "createdAt": "37660",
+    "name": "81769",
+    "description": "Tasty Soap designed with Wooden for prudent performance",
+    "price": "28.69",
+    "stock": "03222-6173",
+    "id": "38"
+  },
+  {
+    "createdAt": "317",
+    "name": "1126",
+    "description": "New Shirt model with 36 GB RAM, 853 GB storage, and unripe features",
+    "price": "754.15",
+    "stock": "94895",
+    "id": "39"
+  },
+  {
+    "createdAt": "91779",
+    "name": "79570",
+    "description": "The sky blue Fish combines Mauritius aesthetics with Holmium-based durability",
+    "price": "232.09",
+    "stock": "85311-0229",
+    "id": "40"
+  },
+  {
+    "createdAt": "155",
+    "name": "580",
+    "description": "Littel - Lemke's most advanced Cheese technology increases numb capabilities",
+    "price": "722.95",
+    "stock": "83590-8368",
+    "id": "41"
+  },
+  {
+    "createdAt": "44810",
+    "name": "6434",
+    "description": "Experience the teal brilliance of our Hat, perfect for serpentine environments",
+    "price": "986.99",
+    "stock": "69091-1686",
+    "id": "42"
+  },
+  {
+    "createdAt": "401",
+    "name": "763",
+    "description": "Introducing the Pakistan-inspired Bacon, blending negative style with local craftsmanship",
+    "price": "343.00",
+    "stock": "25336-9494",
+    "id": "43"
+  },
+  {
+    "createdAt": "1288",
+    "name": "4724",
+    "description": "New Cheese model with 69 GB RAM, 76 GB storage, and flimsy features",
+    "price": "700.49",
+    "stock": "10645",
+    "id": "44"
+  },
+  {
+    "createdAt": "2304",
+    "name": "7326",
+    "description": "Sleek Bacon designed with Steel for immense performance",
+    "price": "861.59",
+    "stock": "00721-8361",
+    "id": "45"
+  },
+  {
+    "createdAt": "595",
+    "name": "8429",
+    "description": "Ergonomic Sausages made with Rubber for all-day acclaimed support",
+    "price": "738.09",
+    "stock": "83638-4288",
+    "id": "46"
+  },
+  {
+    "createdAt": "868",
+    "name": "116",
+    "description": "New blue Bacon with ergonomic design for poor comfort",
+    "price": "843.95",
+    "stock": "42690",
+    "id": "47"
+  },
+  {
+    "createdAt": "31831",
+    "name": "4051",
+    "description": "Stylish Pants designed to make you stand out with babyish looks",
+    "price": "999.75",
+    "stock": "89135-5674",
+    "id": "48"
+  },
+  {
+    "createdAt": "9014",
+    "name": "65958",
+    "description": "Ergonomic Mouse made with Gold for all-day worthwhile support",
+    "price": "118.75",
+    "stock": "44392-1062",
+    "id": "49"
+  },
+  {
+    "createdAt": "485",
+    "name": "554",
+    "description": "Ergonomic Chicken made with Gold for all-day webbed support",
+    "price": "394.49",
+    "stock": "33739",
+    "id": "50"
+  }
+]
