@@ -8,7 +8,15 @@ nuevo usuario.
 existente.
 ● deleteUser(req, res): Se encarga de eliminar un usuario específico */
 
-export async function getAllProducts(req, res) {}
+export const getAllProducts = async (req, res) => {
+  const { category } = req.query;
+  if (category) {
+    const productsByCategory = await Model.getproductsByCategory(category);
+    return res.json(productsByCategory);
+  }
+  const products = await Model.getAllProducts();
+  res.json(products);
+};
 
 export async function getProductByID(req, res) {}
 

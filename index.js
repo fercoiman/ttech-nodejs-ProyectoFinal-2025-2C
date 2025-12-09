@@ -1,55 +1,39 @@
 import express from "express";
 import cors from "cors";
-import router from "./src/routes/products.routes.js";
+import dotenv from "dotenv";
+import productsRouter from "./src/routes/products.routes.js";
 
+dotenv.config();
 const app = express();
-const LOCAL_PORT = 3000;
+const LOCAL_PORT = process.env.PORT || 3000;
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
+app.use("/api", productsRouter);
 
-app.use("/api/products", router);
+app.get("/", (req, res) => {
+  res.json({ message: "Productos API REST!" });
+});
 
 app.post("/products", (req, res) => {
   const { name, price } = req.body;
+
+  if (!name || !price) {
+    return res.status(400).json({ error: "name y price son obligatorios" });
+  }
+
   const product = {
-    //id: products.length + 1,
-    id: Math.max(...products.map((p) => p.id)) + 1,
+    id: Date.now(), // ejemplo simple
     name,
     price,
   };
+
+  res.status(201).json({
+    message: "Producto recibido",
+    product,
+  });
 });
+
 app.listen(LOCAL_PORT, () => {
   console.log(`Servidor Express en http://localhost:${LOCAL_PORT}`);
-});
-
-const corsOptions = {
-  // Dominios permitidos
-  origin: ["https://example.com", "https://anotherdomain.com"],
-  // Métodos HTTP permitidos
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  // Encabezados permitidos
-  allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true,
-  // Permitir cookies o credenciales
-};
-
-app.use((req, res, next) => {
-  // // Permitir un dominio
-  res.header("Access-Control-Allow-Origin", "https://example.com");
-  // Métodos permitidos
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT,DELETE");
-  // Encabezados permitidos
-  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  // Permitir cookies/credenciales
-  res.header("Access-Control-Allow-Credentials", "true");
-  next();
-});
-
-//Middleware para manejar errores
-app.use((req, res, next) => {
-  res.status(404).send("Ruta no válida o recurso no encontrado");
-  // 400 (bad request)
-  // 401 (unauthorized)
-  // 500 (internal server error)
 });

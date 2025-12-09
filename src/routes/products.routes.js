@@ -1,5 +1,5 @@
 import express from "express";
-const router = express.Router();
+const productsRouter = express.Router();
 
 import {
   getAllProducts,
@@ -8,8 +8,16 @@ import {
   deleteProduct,
 } from "../controllers/products.controller.js";
 
-router.get("/api/products", (req, res) => {
+productsRouter.get("/products", (req, res) => {
   res.send("estamos de puta madre");
 });
 
-export default router;
+productsRouter.get("/api/products/:id", (req, res) => {
+  res.send(`Producto con id ${req.params.id}`);
+});
+
+productsRouter.post("/products", (req, res) => {
+  res.send("Producto Creado");
+});
+
+export default productsRouter;
