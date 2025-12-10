@@ -8,16 +8,16 @@ import {
   deleteProduct,
 } from "../controllers/products.controller.js";
 
-productsRouter.get("/products", (req, res) => {
-  res.send("estamos de puta madre");
-});
+// GET /api/products - devuelve todos los productos
+productsRouter.get("/products", getAllProducts);
 
-productsRouter.get("/api/products/:id", (req, res) => {
-  res.send(`Producto con id ${req.params.id}`);
-});
+// GET /api/products/:id - devuelve el producto con el ID indicado
+productsRouter.get("/products/:id", getProductByID);
 
-productsRouter.post("/products", (req, res) => {
-  res.send("Producto Creado");
-});
+// POST /api/products/create - crea un nuevo producto
+productsRouter.post("/products/create", createProduct);
+
+// DELETE /api/products/:id - elimina el producto con el ID indicado
+productsRouter.delete("/products/:id", deleteProduct);
 
 export default productsRouter;

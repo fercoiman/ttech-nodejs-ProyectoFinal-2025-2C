@@ -1,27 +1,82 @@
-/*getAllUsers(req, res): Maneja la solicitud para obtener una lista de usuarios y
-devuelve una respuesta con esa información.
-● getUserById(req, res): Busca un usuario específico basado en un parámetro
-como el id que llega en la solicitud.
-● createUser(req, res): Procesa los datos enviados en la solicitud para crear un
-nuevo usuario.
-● updateUser(req, res): Recibe datos actualizados y los aplica a un usuario
-existente.
-● deleteUser(req, res): Se encarga de eliminar un usuario específico */
+import { productService } from "../services/product.service.js";
 
 export const getAllProducts = async (req, res) => {
-  const { category } = req.query;
-  if (category) {
-    const productsByCategory = await Model.getproductsByCategory(category);
-    return res.json(productsByCategory);
+  try {
+    const products = await productService.getAllProducts();
+    res.status(200).json(products);
+  } catch (error) {
+    console.error("Error en getAllProducts:", error);
+    res.status(500).json({
+      error: "Error al obtener los productos",
+      message: error.message,
+    });
   }
-  const products = await Model.getAllProducts();
-  res.json(products);
 };
 
-export async function getProductByID(req, res) {}
+export const getProductByID = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const product = await productService.getProductById(id);
+    res.status(200).json(product);
+  } catch (error) {
+    console.error("Error en getProductByID:", error);
+    if (error.message === "Producto no encontrado") {
+      res.status(404).json({
+        error: "Producto no encontrado",
+        message: error.message,
+      });
+    } else {
+      res.status(500).json({
+        error: "Error al obtener el producto",
+        message: error.message,
+      });
+    }
+  }
+};
 
-export async function createProduct(req, res) {}
+export const createProduct = async (req, res) => {
+  try {
+    const productData = req.body;
+    const product = await productService.createProduct(productData);
+    res.status(201).json({
+      message: "Producto creado exitosamente",
+      product,
+    });
+  } catch (error) {
+    console.error("Error en createProduct:", error);
+    if (error.message.includes("obligatorios")) {
+      res.status(400).json({
+        error: "Datos inválidos",
+        message: error.message,
+      });
+    } else {
+      res.status(500).json({
+        error: "Error al crear el producto",
+        message: error.message,
+      });
+    }
+  }
+};
 
-export async function updateProduct(req, res) {}
-
-export async function deleteProduct(req, res) {}
+export const deleteProduct = async (req, res) => {
+  try {
+    const { id } = req.params;
+    await productService.deleteProduct(id);
+    res.status(200).json({
+      message: "Producto eliminado exitosamente",
+    });
+  } catch (error) {
+    console.error("Error en deleteProduct:", error);
+    if (error.message === "Producto no encontrado") {
+      res.status(404).json({
+        error: "Producto no encontrado",
+        message: error.message,
+      });
+    } else {
+      res.status(500).json({
+        error: "Error al eliminar el producto",
+        message: error.message,
+      });
+    }
+  }
+};

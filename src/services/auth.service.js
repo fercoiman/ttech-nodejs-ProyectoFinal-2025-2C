@@ -1,0 +1,54 @@
+import jwt from "jsonwebtoken";
+import { userModel } from "../models/user.model.js";
+
+const JWT_SECRET = process.env.JWT_SECRET || "tu-secret-key-muy-segura";
+
+export const authService = {
+  async login(email, password) {
+    try {
+      // Buscar usuario por email
+      const user = await userModel.getUserByEmail(email);
+      
+      if (!user) {
+        throw new Error("Credenciales inválidas");
+      }
+
+      // Verificar contraseña (en producción deberías usar bcrypt para hash)
+      if (user.password !== password) {
+        throw new Error("Credenciales inválidas");
+      }
+
+      // Generar token JWT
+      const token = jwt.sign(
+        {
+          id: user.id,
+          email: user.email,
+        },
+        JWT_SECRET,
+        {
+          expiresIn: "24h",
+        }
+      );
+
+      return {
+        token,
+        user: {
+          id: user.id,
+          email: user.email,
+        },
+      };
+    } catch (error) {
+      throw error;
+    }
+  },
+
+  verifyToken(token) {
+    try {
+      const decoded = jwt.verify(token, JWT_SECRET);
+      return decoded;
+    } catch (error) {
+      throw new Error("Token inválido o expirado");
+    }
+  },
+};
+
