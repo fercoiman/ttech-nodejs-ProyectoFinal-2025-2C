@@ -1,11 +1,53 @@
-import { productModel } from "../models/product.model";
+import { productModel } from "../models/product.model.js";
 
-async function getAllProducts() {
-  const products = await productModel.getAllProducts();
-  return products;
-}
+export const productService = {
+  async getAllProducts() {
+    try {
+      const products = await productModel.getAllProducts();
+      return products;
+    } catch (error) {
+      throw error;
+    }
+  },
 
-async function getAllProductsInStock() {
-  const products = await productModel.getAllProducts();
-  return products.filter((product) => product.stock > 0);
-}
+  async getProductById(id) {
+    try {
+      const product = await productModel.getProductById(id);
+      if (!product) {
+        throw new Error("Producto no encontrado");
+      }
+      return product;
+    } catch (error) {
+      throw error;
+    }
+  },
+
+  async createProduct(productData) {
+    try {
+      // Validar datos requeridos
+      if (!productData.name || !productData.price) {
+        throw new Error("name y price son campos obligatorios");
+      }
+
+      const product = await productModel.createProduct(productData);
+      return product;
+    } catch (error) {
+      throw error;
+    }
+  },
+
+  async deleteProduct(id) {
+    try {
+      // Verificar que el producto existe
+      const product = await productModel.getProductById(id);
+      if (!product) {
+        throw new Error("Producto no encontrado");
+      }
+
+      await productModel.deleteProduct(id);
+      return true;
+    } catch (error) {
+      throw error;
+    }
+  },
+};
