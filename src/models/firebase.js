@@ -1,10 +1,11 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import { configDotenv } from "dotenv";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAQ_u1kcOrngclYJLsc7n5RpTphLLRgMQY",
+  apiKey: 
   authDomain: "entregafinal-8e4a9.firebaseapp.com",
   projectId: "entregafinal-8e4a9",
   storageBucket: "entregafinal-8e4a9.firebasestorage.app",
