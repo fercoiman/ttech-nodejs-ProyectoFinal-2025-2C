@@ -25,7 +25,7 @@ export const authService = {
         },
         JWT_SECRET,
         {
-          expiresIn: "24h",
+          expiresIn: "1h",
         }
       );
 
