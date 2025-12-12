@@ -1,19 +1,18 @@
 import jwt from "jsonwebtoken";
+import "dotenv/config";
 import { userModel } from "../models/user.model.js";
 
-const JWT_SECRET = process.env.JWT_SECRET || "tu-secret-key-muy-segura";
+const JWT_SECRET = process.env.JWT_SECRET || "f6Z!32cJeQBJj7^YJ&7J";
 
 export const authService = {
   async login(email, password) {
     try {
-      // Buscar usuario por email
       const user = await userModel.getUserByEmail(email);
-      
+
       if (!user) {
         throw new Error("Credenciales inválidas");
       }
 
-      // Verificar contraseña (en producción deberías usar bcrypt para hash)
       if (user.password !== password) {
         throw new Error("Credenciales inválidas");
       }
@@ -51,4 +50,3 @@ export const authService = {
     }
   },
 };
-

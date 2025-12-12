@@ -1,5 +1,0 @@
-fcoiman/Gmail.com
-mongodb Atlas
-
-fcoiman_db_user
-guzmz2EtD7X7GEP8U

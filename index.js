@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 import productsRouter from "./src/routes/products.routes.js";
 import authRouter from "./src/routes/auth.routes.js";
 
-dotenv.config();
+dotenv.config(".env");
 const app = express();
 const LOCAL_PORT = process.env.PORT || 3000;
 
