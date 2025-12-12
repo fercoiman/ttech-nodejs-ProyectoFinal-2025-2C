@@ -12,7 +12,6 @@ import { db } from "./firebase.js";
 const PRODUCTS_COLLECTION = "products";
 
 export const productModel = {
-  // Obtener todos los productos
   async getAllProducts() {
     try {
       const productsCollection = collection(db, PRODUCTS_COLLECTION);
@@ -27,16 +26,15 @@ export const productModel = {
     }
   },
 
-  // Obtener un producto por ID
   async getProductById(id) {
     try {
       const productDoc = doc(db, PRODUCTS_COLLECTION, id);
       const productSnapshot = await getDoc(productDoc);
-      
+
       if (!productSnapshot.exists()) {
         return null;
       }
-      
+
       return {
         id: productSnapshot.id,
         ...productSnapshot.data(),
@@ -47,7 +45,6 @@ export const productModel = {
     }
   },
 
-  // Crear un nuevo producto
   async createProduct(productData) {
     try {
       const productsCollection = collection(db, PRODUCTS_COLLECTION);

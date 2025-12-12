@@ -1,10 +1,13 @@
 import express from "express";
-const authRouter = express.Router();
-
 import { login } from "../controllers/auth.controller.js";
 
-// POST /auth/login - recibe credenciales y devuelve Bearer token
+const authRouter = express.Router();
+
+//{
+//    "email": "fernando@pepe.net",
+//    "password": "pass"
+//}
+
 authRouter.post("/login", login);
 
 export default authRouter;
-

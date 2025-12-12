@@ -4,6 +4,11 @@ import { userModel } from "../models/user.model.js";
 
 const JWT_SECRET = process.env.JWT_SECRET || "f6Z!32cJeQBJj7^YJ&7J";
 
+//{
+//    "email": "fernando@pepe.net",
+//    "password": "pass"
+//}
+
 export const authService = {
   async login(email, password) {
     try {
@@ -17,7 +22,6 @@ export const authService = {
         throw new Error("Credenciales inválidas");
       }
 
-      // Generar token JWT
       const token = jwt.sign(
         {
           id: user.id,

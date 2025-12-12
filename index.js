@@ -4,6 +4,7 @@ import "dotenv/config";
 import dotenv from "dotenv";
 import productsRouter from "./src/routes/products.routes.js";
 import authRouter from "./src/routes/auth.routes.js";
+import { authenticateToken } from "./src/middlewares/auth.middleware.js";
 
 dotenv.config(".env");
 const app = express();
@@ -12,7 +13,9 @@ const LOCAL_PORT = process.env.PORT || 3000;
 // Middlewares globales
 app.use(cors());
 app.use(express.json());
+//app.use(authenticateToken);
 
+//app.use("/api", authenticateToken, productsRouter);
 // Rutas
 app.get("/", (req, res) => {
   res.json({ message: "Productos API REST!" });

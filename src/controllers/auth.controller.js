@@ -1,10 +1,14 @@
 import { authService } from "../services/auth.service.js";
 
+//{
+//    "email": "fernando@pepe.net",
+//    "password": "pass"
+//}
+
 export const login = async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    // Validar que se proporcionen las credenciales
     if (!email || !password) {
       return res.status(400).json({
         error: "Datos inválidos",
@@ -35,4 +39,3 @@ export const login = async (req, res) => {
     }
   }
 };
-
